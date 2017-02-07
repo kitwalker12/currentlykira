@@ -24,3 +24,8 @@ div, p, h1, h3, a, span {
 h1, h2, h3 {
   text-transform: uppercase;
 }
+
+a, a:hover {
+  color: black;
+  text-decoration: none;
+}
