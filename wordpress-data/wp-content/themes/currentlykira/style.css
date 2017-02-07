@@ -29,3 +29,50 @@ a, a:hover {
   color: black;
   text-decoration: none;
 }
+
+/*Navigation*/
+.admin-bar .navigation {
+  top: 32px;
+}
+
+.navigation {
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+  height: 3rem;
+  background-color: white;
+}
+
+.navigation ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.navigation li {
+  float: left;
+  position: relative;
+  margin-right: 3rem;
+}
+
+.navigation a {
+  display: inline;
+  font-size: 0.8rem;
+  line-height: 3.2rem;
+  text-transform: uppercase;
+}
+
+.site-title {
+  padding-top: 3rem;
+}
+
+/*Logo*/
+.site-title {
+  font-size: 4rem;
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
