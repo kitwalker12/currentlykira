@@ -1,3 +1,4 @@
+<!-- attachment -->
 <?php get_header(); ?>
 <?php global $post; ?>
 <section id="content" role="main">
@@ -30,3 +31,4 @@
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+<!-- END attachment -->

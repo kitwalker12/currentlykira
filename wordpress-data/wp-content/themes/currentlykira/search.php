@@ -1,3 +1,4 @@
+<!-- search -->
 <?php get_header(); ?>
 <section id="content" role="main">
 <?php if ( have_posts() ) : ?>
@@ -22,3 +23,4 @@
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+<!-- END search -->

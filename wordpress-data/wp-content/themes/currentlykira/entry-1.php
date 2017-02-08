@@ -1,3 +1,4 @@
+<!-- entry-1 -->
 <div class="row">
   <div class="column">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -10,3 +11,4 @@
     </article>
   </div>
 </div>
+<!-- END entry-1 -->

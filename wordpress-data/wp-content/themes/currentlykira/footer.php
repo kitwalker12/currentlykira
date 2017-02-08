@@ -1,3 +1,4 @@
+<!-- footer -->
   </section>
   <footer class="footer">
     <section class="container">

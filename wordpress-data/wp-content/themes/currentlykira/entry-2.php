@@ -1,3 +1,4 @@
+<!-- entry-2 -->
 <?php if ($wp_query->current_post == 1) {
   echo "<div class='row'>";
 } ?>
@@ -14,3 +15,4 @@
 <?php if (($wp_query->current_post +1) == ($wp_query->post_count) || ($wp_query->current_post == 2)) {
   echo "</div>";
 } ?>
+<!-- END entry-2 -->

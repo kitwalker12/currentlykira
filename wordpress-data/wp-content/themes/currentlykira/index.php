@@ -1,3 +1,4 @@
+<!-- index -->
 <?php get_header(); ?>
 
 <?php $count = 0; ?>
@@ -21,3 +22,4 @@
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+<!-- END index -->

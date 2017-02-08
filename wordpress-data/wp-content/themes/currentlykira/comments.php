@@ -1,3 +1,4 @@
+<!-- comments -->
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
 <section id="comments">
 <?php
@@ -39,3 +40,4 @@ endif;
 if ( comments_open() ) comment_form();
 ?>
 </section>
+<!-- END comments -->

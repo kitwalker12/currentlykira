@@ -1,3 +1,4 @@
+<!-- 404 -->
 <?php get_header(); ?>
 <section id="content" role="main">
 <article id="post-0" class="post not-found">
@@ -12,3 +13,4 @@
 </section>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+<!-- END 404 -->
