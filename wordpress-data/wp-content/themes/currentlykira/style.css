@@ -76,3 +76,25 @@ a, a:hover {
   padding-top: 4rem;
   padding-bottom: 4rem;
 }
+
+/*Top Row Posts*/
+.entry-1 { /*full-width-container*/
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.entry-1 .img-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40%;
+  position: relative;
+}
+
+.entry-1 .post-info {
+  bottom: 50px;
+  right: 50px;
+  position: absolute;
+  left: auto;
+  width: 25%;
+  padding: 85px 50px;
+}
