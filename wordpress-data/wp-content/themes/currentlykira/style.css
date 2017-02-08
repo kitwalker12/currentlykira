@@ -100,6 +100,12 @@ a, a:hover {
   margin-right: 25px;
 }
 
+.entry-3 .img-container {
+  padding-bottom: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .entry-1 .entry-info {
   bottom: 50px;
   right: 50px;
@@ -122,10 +128,21 @@ a, a:hover {
   padding: 85px 50px;
 }
 
+.entry-3 .entry-info {
+  margin-top: 1rem;
+  text-align: center;
+}
+
 .entry-title {
   font-size: 1.5rem;
   text-align: center;
   line-height: 2rem;
+}
+
+.entry-3 .entry-title {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
 }
 
 .entry-line {
@@ -138,7 +155,7 @@ a, a:hover {
   text-align: center;
   margin: 2rem 0;
   font-size: 0.7rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .entry-read-more {
@@ -147,7 +164,7 @@ a, a:hover {
   display: inline-block;
   background-color: white;
   height: 2rem;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   line-height: 2.2rem;
   width: 7rem;
   margin-top: 1.5rem;
