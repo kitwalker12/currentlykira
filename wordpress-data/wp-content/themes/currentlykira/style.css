@@ -90,11 +90,50 @@ a, a:hover {
   position: relative;
 }
 
-.entry-1 .post-info {
+.entry-1 .entry-info {
   bottom: 50px;
   right: 50px;
   position: absolute;
   left: auto;
   width: 25%;
   padding: 85px 50px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.entry-1 .entry-title {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.entry-1 .entry-line {
+  border-bottom: 1px solid black;
+  margin: 0 auto;
+  width: 1.5rem;
+}
+
+.entry-1 .entry-hashtag {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 0.7rem;
+  letter-spacing: .1rem;
+}
+
+.entry-1 .entry-read-more {
+  font-size: 0.7rem;
+  text-align: center;
+  display: inline-block;
+  background-color: white;
+  height: 2rem;
+  letter-spacing: .1rem;
+  line-height: 2.2rem;
+  width: 7rem;
+  margin-top: 1.5rem;
+}
+
+.entry-1 .entry-tagline {
+  font-size: 0.6rem;
+  margin-top: 1rem;
+  padding: 0 3rem;
 }
