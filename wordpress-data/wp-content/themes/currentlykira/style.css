@@ -184,3 +184,41 @@ a, a:hover {
   letter-spacing: 0.1rem;
   font-size: 0.7rem;
 }
+
+/*Footer*/
+
+.footer {
+  height: 13rem;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  background-color: #373737;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  padding: 3.75rem 0;
+}
+
+.footer-attrib {
+  text-align: right;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: inline-block;
+}
+
+.footer-nav li {
+  float: left;
+}
+
+.footer-nav a {
+  display: inline;
+}
