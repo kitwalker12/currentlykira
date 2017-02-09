@@ -185,6 +185,17 @@ a, a:hover {
   font-size: 0.7rem;
 }
 
+/*Category*/
+
+.category .entry-latest-posts {
+  border: none;
+}
+
+.category-title {
+  font-weight: bold;
+  color: black;
+}
+
 /*Footer*/
 
 .footer {
@@ -194,6 +205,7 @@ a, a:hover {
   background-color: #373737;
   color: white;
   letter-spacing: 0.1rem;
+  margin-top: 10rem;
 }
 
 .footer a {
