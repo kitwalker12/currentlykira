@@ -17,7 +17,7 @@ currentlykira is distributed under the terms of the GNU GPL
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
 .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
 
-div, p, h1, h3, a, span {
+div, p, h1, h2, h3, a, span {
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -77,8 +77,9 @@ a, a:hover {
   padding-bottom: 3rem;
 }
 
-/*Top Row Posts*/
-.entry-1 { /*full-width-container*/
+/*Index Page*/
+
+.entry-1, .entry-latest-posts { /*full-width-container*/
   margin-left: -2rem;
   margin-right: -2rem;
 }
@@ -92,6 +93,7 @@ a, a:hover {
 
 .entry-1 .img-container {
   padding-bottom: 40%;
+  margin-bottom: 1rem;
 }
 
 .entry-2 .img-container {
@@ -172,4 +174,13 @@ a, a:hover {
   font-size: 0.6rem;
   margin-top: 1rem;
   padding: 0 3rem;
+}
+
+.entry-latest-posts {
+  margin-top: 4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid grey;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
 }

@@ -7,6 +7,15 @@
     <?php get_template_part( 'entry', '1' ); ?>
     <?php comments_template(); ?>
   <?php endif ?>
+  <?php if ($count == 1): ?>
+    <div class="row">
+      <div class="column">
+        <h2 class="entry-latest-posts">
+          LATEST POSTS
+        </h2>
+      </div>
+    </div>
+  <?php endif ?>
   <?php if ($count == 1 || $count == 2): ?>
     <?php get_template_part( 'entry', '2' ); ?>
     <?php comments_template(); ?>
