@@ -45,7 +45,7 @@
     <?#php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
   </article>
 </div>
-<?php if (($wp_query->current_post +1) == ($wp_query->post_count) || ($wp_query->current_post == 2)) {
+<?php if (($wp_query->current_post + 1) == ($wp_query->post_count) || ($wp_query->current_post == 2)) {
   echo "</div>";
 } ?>
 <!-- END entry-2 -->
