@@ -217,6 +217,7 @@ a, a:hover {
 
 .footer-nav li {
   float: left;
+  margin: 3rem 1.25rem;
 }
 
 .footer-nav a {
