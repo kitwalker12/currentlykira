@@ -1,6 +1,6 @@
 <!-- footer -->
   </section>
-  <footer class="footer">
+  <footer class="site-footer">
     <section class="container">
       <div class="row">
         <div class="column column-25">

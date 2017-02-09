@@ -198,7 +198,7 @@ a, a:hover {
 
 /*Footer*/
 
-.footer {
+.site-footer {
   height: 13rem;
   text-transform: uppercase;
   font-size: 0.6rem;
@@ -208,7 +208,7 @@ a, a:hover {
   margin-top: 10rem;
 }
 
-.footer a {
+.site-footer a {
   text-decoration: none;
   color: white;
 }
