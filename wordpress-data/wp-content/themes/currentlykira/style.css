@@ -79,7 +79,7 @@ a, a:hover {
 
 /*Index Page*/
 
-.entry-1, .entry-latest-posts { /*full-width-container*/
+.entry-1, .entry-latest-posts, .entry .img-container { /*full-width-container*/
   margin-left: -2rem;
   margin-right: -2rem;
 }
@@ -133,10 +133,19 @@ a, a:hover {
   text-align: center;
 }
 
+.entry .entry-info {
+  width: 25%;
+  padding: 85px 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .entry-title {
   font-size: 1.5rem;
   text-align: center;
   line-height: 2rem;
+  font-weight: bold;
+  color: black;
 }
 
 .entry-3 .entry-title {
