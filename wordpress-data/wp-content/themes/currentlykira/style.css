@@ -74,7 +74,7 @@ a, a:hover {
   font-size: 4rem;
   text-align: center;
   padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 /*Top Row Posts*/
@@ -96,14 +96,12 @@ a, a:hover {
 
 .entry-2 .img-container {
   padding-bottom: 120%;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 2rem 1.5rem;
 }
 
 .entry-3 .img-container {
   padding-bottom: 100%;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 1.5rem 1.25rem;
 }
 
 .entry-1 .entry-info {

@@ -4,8 +4,10 @@
 } ?>
 <div class="column column-33">
   <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry-3' ); ?>>
-    <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url(large); ?>)">
-    </div>
+    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+      <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url(large); ?>)">
+      </div>
+    </a>
     <article class="entry-info">
       <?php if ( is_singular() ) {
         echo '<h1 class="entry-title">';
