@@ -30,6 +30,10 @@ a, a:hover {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1440px;
+}
+
 /* Navigation */
 .admin-bar .navigation {
   top: 32px;
