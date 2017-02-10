@@ -247,7 +247,54 @@ a, a:hover {
 
 /* Post */
 
-.entry-content p {
+.entry-content p, .entry-content h1, .entry-content h2 {
   font-size: 1.3rem;
-  padding: 1rem 4rem;
+  padding: 1rem 8rem;
+}
+
+.entry-content .wp-caption.alignright {
+  margin-right: 8rem;
+}
+
+.entry-content .wp-caption.alignleft {
+  margin-left: 8rem;
+}
+
+.entry-content .size-full {
+  max-width: 1080px;
+  height: auto;
+  width: 111%;
+  max-width: 111%;
+  margin: 0 -5%;
+}
+
+.entry-content h1, .entry-content h2 {
+  font-size: 1.5rem;
+}
+
+.entry-content .alignright {
+  float: right;
+  margin-left: 3rem;
+}
+
+.entry-content .aligncenter {
+  text-align: center;
+}
+
+.entry-content .alignleft {
+  float: left;
+  margin-right: 3rem;
+}
+
+.entry-content .size-large, .entry-content .size-medium {
+  max-width: 720px;
+  min-width: 480px;
+  height: auto;
+}
+
+.entry-content .wp-caption-text {
+  font-size: 0.7rem;
+  padding: 0;
+  margin-top: 1rem;
+  line-height: 1rem;
 }
