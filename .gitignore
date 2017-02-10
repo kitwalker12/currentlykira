@@ -1,2 +1,17 @@
-wordpress-data/wp-content/plugins
-wordpress-data/wp-content/uploads
+# Ignore everything:
+*
+!.gitignore
+!docker-compose.yml
+
+
+# Except for the themes directories:
+
+!wordpress-data/
+!wordpress-data/wp-content/
+!wordpress-data/wp-content/themes/
+!wordpress-data/wp-content/themes/currentlykira/
+!wordpress-data/wp-content/themes/currentlykira/*
+!wordpress-data/wp-content/themes/currentlykira/*/*
+!wordpress-data/wp-content/themes/currentlykira/*/*/*
+!wordpress-data/wp-content/themes/currentlykira/*/*/*/*
+!wordpress-data/wp-content/themes/currentlykira/*/*/*/*/*
