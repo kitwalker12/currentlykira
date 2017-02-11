@@ -15,11 +15,11 @@
         </div>
       </div>
       <div class="row">
-        <div class="column column-50">
+        <div class="column column-50 footer-copyright">
           <?php echo sprintf( __( 'all rights reserved. %1$s %2$s', 'currentlykira' ), esc_html( get_bloginfo( 'name' ) ), date( 'Y' ) ); ?>
         </div>
         <div class="column column-50 footer-attrib">
-          <?php echo sprintf( __( ' Site Designed By: %1$s.', 'currentlykira' ), '<a href="http://www.rosalie.agency">Rosalie</a>' ); ?>
+          <?php echo sprintf( __( ' Site Designed By %1$s.', 'currentlykira' ), '<a href="http://www.rosalie.agency" style="text-decoration:underline" target="_blank">Rosalie</a>' ); ?>
         </div>
       </div>
     </section>

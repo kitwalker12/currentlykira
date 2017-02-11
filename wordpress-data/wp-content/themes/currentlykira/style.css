@@ -71,21 +71,20 @@ a, a:hover {
 .navigation a {
   display: inline;
   font-size: 10px;
-  line-height: 24px;
+  line-height: 2.4;
   letter-spacing: 2px;
+  color: #191919;
   text-transform: uppercase;
 }
 
-.site-title {
-  padding-top: 3rem;
-}
 
 /* Logo */
+
 .site-title {
   font-size: 4rem;
   text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-top: 84.2px;
+  padding-bottom: 51px;
 }
 
 /* Index Page */
@@ -108,13 +107,17 @@ a, a:hover {
 }
 
 .entry-2 .img-container {
-  padding-bottom: 120%;
-  margin: 2rem 1.5rem;
+  padding-bottom: 150%;
+  margin: 0 auto 71px;
+  min-width: 480px;
+  min-height: 720px;
 }
 
 .entry-3 .img-container {
   padding-bottom: 100%;
-  margin: 1.5rem 1.25rem;
+  margin: 0 20px 16px;
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .entry-nav-below .img-container {
@@ -123,25 +126,26 @@ a, a:hover {
 }
 
 .entry-1 .entry-info {
-  bottom: 50px;
-  right: 50px;
+  bottom: 48px;
+  right: 48px;
   position: absolute;
   left: auto;
-  width: 25%;
-  padding: 85px 50px;
+  width: 284px;
+  padding: 81px 40px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 .entry-2 .entry-info {
-  width: 60%;
+  width: 284px;
+  height: 418px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
-  right: 19%;
+  right: 23%;
   left: auto;
-  top: 21%;
-  padding: 85px 50px;
+  top: 25%;
+  padding: 80px 67px;
 }
 
 .entry-3 .entry-info {
@@ -149,8 +153,21 @@ a, a:hover {
   text-align: center;
 }
 
+.entry-3 .entry-title a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  color: #191919;
+  font-weight: 700;
+}
+
+.entry-3 .entry-title {
+  margin-bottom: 40px;
+}
+
 .entry .entry-info {
-  padding: 85px 50px;
+  padding: 81px 40px;
   margin: 0 auto;
   text-align: center;
 }
@@ -162,17 +179,13 @@ a, a:hover {
 }
 
 .entry-title {
-  font-size: 1.5rem;
   text-align: center;
-  line-height: 2rem;
   font-weight: 700;
   color: black;
-}
-
-.entry-3 .entry-title {
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
-  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.33;
+  letter-spacing: 3px;
+  color: #191919;
 }
 
 .entry-line {
@@ -183,21 +196,25 @@ a, a:hover {
 
 .entry-hashtag {
   text-align: center;
-  margin: 2rem 0;
-  font-size: 0.7rem;
-  letter-spacing: 0.1rem;
+  margin: 0 0 20px;
+  font-size: 10px;
+  line-height: 2.4;
+  letter-spacing: 1px;
+  color: #191919;
 }
 
 .entry-read-more {
-  font-size: 0.7rem;
   text-align: center;
   display: inline-block;
   background-color: white;
-  height: 2rem;
-  letter-spacing: 0.1rem;
-  line-height: 2.2rem;
-  width: 7rem;
-  margin-top: 1.5rem;
+  height: 30px;
+  width: 110px;
+  margin-top: 27px;
+  font-size: 8px;
+  line-height: 4;
+  letter-spacing: 0.8px;
+  color: #373737;
+
 }
 
 .entry-nav-below .entry-read-more {
@@ -205,18 +222,22 @@ a, a:hover {
 }
 
 .entry-tagline {
-  font-size: 0.6rem;
-  margin-top: 1rem;
-  padding: 0 3rem;
+  margin-top: 16px;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: normal;
+  color: #191919;
 }
 
 .entry-latest-posts {
-  margin-top: 4rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid grey;
+  margin-top: 56px;
+  padding-bottom: 24px;
   text-align: center;
-  letter-spacing: 0.1rem;
-  font-size: 0.7rem;
+  font-size: 10px;
+  line-height: 2.4;
+  letter-spacing: 2px;
+  color: #191919;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 /* Category */
@@ -233,13 +254,13 @@ a, a:hover {
 /* Footer */
 
 .site-footer {
-  height: 13rem;
+  height: 208px;
   text-transform: uppercase;
   font-size: 0.6rem;
   background-color: #373737;
   color: white;
   letter-spacing: 0.1rem;
-  margin-top: 10rem;
+  margin-top: 119.7px;
 }
 
 .site-footer a {
@@ -263,11 +284,22 @@ a, a:hover {
 
 .footer-nav li {
   float: left;
-  margin: 3rem 1.25rem;
+  margin: 49.6px 20px 79.4px;
 }
 
 .footer-nav a {
   display: inline;
+  font-size: 10px;
+  line-height: 2.4;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.footer-copyright, .footer-attrib {
+  font-size: 10px;
+  line-height: 2.4;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 
 /* Post */
