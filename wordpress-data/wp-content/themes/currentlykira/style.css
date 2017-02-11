@@ -110,6 +110,11 @@ a, a:hover {
   margin: 1.5rem 1.25rem;
 }
 
+.entry-nav-below .img-container {
+  padding-bottom: 100%;
+  margin: 7rem 0 0;
+}
+
 .entry-1 .entry-info {
   bottom: 50px;
   right: 50px;
@@ -138,8 +143,13 @@ a, a:hover {
 }
 
 .entry .entry-info {
-  width: 25%;
   padding: 85px 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.entry-nav-below .entry-info {
+  padding: 90px 50px 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -181,6 +191,10 @@ a, a:hover {
   line-height: 2.2rem;
   width: 7rem;
   margin-top: 1.5rem;
+}
+
+.entry-nav-below .entry-read-more {
+  border: 1px solid black;
 }
 
 .entry-tagline {
@@ -316,4 +330,10 @@ a, a:hover {
 
  .comments {
   padding: 0 6rem;
+ }
+
+ /* Nav Below Single */
+
+ .nav-below-single {
+  padding: 0 5rem;
  }

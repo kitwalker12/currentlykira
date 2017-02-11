@@ -11,19 +11,11 @@
               <?php echo "#CURRENTLYBEAUTY"; ?>
             <?php endif ?>
           </h3>
-          <?php if ( is_singular() ) {
-            echo '<h1 class="entry-title">';
-          } else {
-            echo '<h2 class="entry-title">';
-          } ?>
-          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-            <?php the_title(); ?>
-          </a>
-          <?php if ( is_singular() ) {
-            echo '</h1>';
-          } else {
-            echo '</h2>';
-          } ?>
+          <h2 class="entry-title">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
+              <?php the_title(); ?>
+            </a>
+          </h2>
           <div class="entry-line">&nbsp;</div>
           <?php if ( get_post_meta( get_the_ID(), 'tagline', true ) ): ?>
             <p class="entry-tagline">
