@@ -1,43 +1,97 @@
 <!-- comments -->
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
 <section id="comments">
-<?php
-if ( have_comments() ) :
-global $comments_by_type;
-$comments_by_type = &separate_comments( $comments );
-if ( ! empty( $comments_by_type['comment'] ) ) :
-?>
-<section id="comments-list" class="comments">
-<h3 class="comments-title"><?php comments_number(); ?></h3>
-<?php if ( get_comment_pages_count() > 1 ) : ?>
-<nav id="comments-nav-above" class="comments-navigation" role="navigation">
-<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-</nav>
-<?php endif; ?>
-<ul>
-<?php wp_list_comments( 'type=comment' ); ?>
-</ul>
-<?php if ( get_comment_pages_count() > 1 ) : ?>
-<nav id="comments-nav-below" class="comments-navigation" role="navigation">
-<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-</nav>
-<?php endif; ?>
-</section>
-<?php
-endif;
-if ( ! empty( $comments_by_type['pings'] ) ) :
-$ping_count = count( $comments_by_type['pings'] );
-?>
-<section id="trackbacks-list" class="comments">
-<h3 class="comments-title"><?php echo '<span class="ping-count">' . $ping_count . '</span> ' . ( $ping_count > 1 ? __( 'Trackbacks', 'currentlykira' ) : __( 'Trackback', 'currentlykira' ) ); ?></h3>
-<ul>
-<?php wp_list_comments( 'type=pings&callback=currentlykira_custom_pings' ); ?>
-</ul>
-</section>
-<?php
-endif;
-endif;
-if ( comments_open() ) comment_form();
-?>
+  <div class="row comments">
+    <div class="column">
+      <?php if (condition): ?>
+        COMMENTS(<?php comments_number('0', '1', '%') ?>)
+      <?php endif ?>
+    </div>
+  </div>
+  <div class="row comments">
+    <div class="column">
+      <?php if (comments_open()): ?>
+        <?php
+          $fields =  array(
+            'author' =>
+              '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
+              ( $req ? '<span class="required">*</span>' : '' ) .
+              '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+              '" size="30"' . $aria_req . ' /></p>',
+
+            'email' =>
+              '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
+              ( $req ? '<span class="required">*</span>' : '' ) .
+              '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+              '" size="30"' . $aria_req . ' /></p>',
+
+            'url' => '',
+          );
+          $custom_args = array(
+            'title_reply'       => __( '' ),
+            'title_reply_to'    => __( '' ),
+            'cancel_reply_link' => __( 'CANCEL' ),
+            'label_submit'      => __( 'POST COMMENT...' ),
+
+            'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
+              '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+              '</textarea></p>',
+
+            'must_log_in' => '',
+            'logged_in_as' => '',
+            'comment_notes_before' => '',
+            'comment_notes_after' => '',
+            'fields' => $fields
+          );
+        ?>
+        <?php comment_form($custom_args); ?>
+      <?php endif ?>
+    </div>
+  </div>
+  <?php
+  if ( have_comments() ) :
+    global $comments_by_type;
+    $comments_by_type = &separate_comments( $comments );
+    if ( ! empty( $comments_by_type['comment'] ) ) :
+      ?>
+      <section id="comments-list">
+        <div class="row comments">
+          <div class="column">
+            <?php if ( get_comment_pages_count() > 1 ) : ?>
+              <nav id="comments-nav-above" class="comments-navigation" role="navigation">
+                <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
+              </nav>
+            <?php endif; ?>
+          </div>
+        </div>
+        <div class="row comments">
+          <div class="column">
+            <ul>
+              <?php
+                $custom_args = array(
+                  'type'              => 'comment',
+                  'reply_text'        => 'Reply',
+                  'avatar_size'       => 32,
+                  'reverse_top_level' => true
+                )
+              ?>
+              <?php wp_list_comments( $custom_args ); ?>
+            </ul>
+          </div>
+        </div>
+        <div class="row comments">
+          <div class="column">
+            <?php if ( get_comment_pages_count() > 1 ) : ?>
+              <nav id="comments-nav-below" class="comments-navigation" role="navigation">
+                <div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
+              </nav>
+            <?php endif; ?>
+          </div>
+        </div>
+      </section>
+      <?php
+    endif;
+  endif;
+  ?>
 </section>
 <!-- END comments -->

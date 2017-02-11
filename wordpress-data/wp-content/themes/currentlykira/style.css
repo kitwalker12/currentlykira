@@ -302,3 +302,15 @@ a, a:hover {
   margin-top: 1rem;
   line-height: 1rem;
 }
+
+ /* Comments */
+
+ #comments {
+  background-color: #F8F8F8;
+  margin-right: -2rem;
+  margin-left: -2rem;
+ }
+
+ .comments {
+  padding: 0 6rem;
+ }
