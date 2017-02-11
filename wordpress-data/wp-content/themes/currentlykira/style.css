@@ -122,7 +122,9 @@ a, a:hover {
 
 .entry-nav-below .img-container {
   padding-bottom: 100%;
-  margin: 7rem 0 0;
+  margin: 121px 0 0;
+  min-width: 240px;
+  min-height: 240px;
 }
 
 .entry-1 .entry-info {
@@ -167,13 +169,16 @@ a, a:hover {
 }
 
 .entry .entry-info {
-  padding: 81px 40px;
+  padding: 80px 0 69px;
   margin: 0 auto;
   text-align: center;
+  width: 163px;
 }
 
 .entry-nav-below .entry-info {
-  padding: 90px 50px 0;
+  width: 244px;
+  height: 240px;
+  padding: 130px 50px 0;
   margin: 0 auto;
   text-align: center;
 }
@@ -304,11 +309,6 @@ a, a:hover {
 
 /* Post */
 
-.entry-content p, .entry-content h1, .entry-content h2 {
-  font-size: 1.3rem;
-  padding: 1rem 8rem;
-}
-
 .entry-content .wp-caption.alignright {
   margin-right: 8rem;
 }
@@ -321,17 +321,33 @@ a, a:hover {
   max-width: 1080px;
   height: auto;
   width: 111%;
-  max-width: 111%;
-  margin: 0 -5%;
+  margin: 0 -5% 72px;
 }
 
 .entry-content h1, .entry-content h2 {
-  font-size: 1.5rem;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 3px;
+  color: #191919;
+  margin-bottom: 40px;
+  padding: 0 8rem;
+}
+
+.entry-content p {
+  padding: 1rem 8rem;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.3px;
+  color: #191919;
+}
+
+.entry-content img {
+  margin-bottom: 80px;
 }
 
 .entry-content .alignright {
   float: right;
-  margin-left: 3rem;
+  margin-left: 40px;
 }
 
 .entry-content .aligncenter {
@@ -340,7 +356,7 @@ a, a:hover {
 
 .entry-content .alignleft {
   float: left;
-  margin-right: 3rem;
+  margin-right: 40px;
 }
 
 .entry-content .size-large, .entry-content .size-medium {
@@ -350,10 +366,12 @@ a, a:hover {
 }
 
 .entry-content .wp-caption-text {
-  font-size: 0.7rem;
   padding: 0;
-  margin-top: 1rem;
-  line-height: 1rem;
+  margin-top: -63px;
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: 0.1px;
+  color: #191919;
 }
 
 .entry h1 {

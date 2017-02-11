@@ -9,7 +9,7 @@
       </div>
     </a>
     <article class="entry-info">
-      <h2 class="enrey-title">
+      <h2 class="entry-title">
         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
           <?php the_title(); ?>
         </a>
