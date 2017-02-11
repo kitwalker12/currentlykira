@@ -155,6 +155,12 @@ a, a:hover {
   text-align: center;
 }
 
+.entry-1 .entry-title {
+  margin: 0 auto;
+  text-align: center;
+  width: 163px;
+}
+
 .entry-3 .entry-title a {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
@@ -385,7 +391,6 @@ a, a:hover {
   margin-right: -2rem;
   margin-left: -2rem;
   border-top: 1px solid #dedede;
-  border-bottom: 1rem solid #191919;
   padding-top: 200px;
  }
 
@@ -397,4 +402,5 @@ a, a:hover {
 
  .nav-below-single {
   padding: 0 5rem;
+  border-top: 16px solid #191919;
  }
