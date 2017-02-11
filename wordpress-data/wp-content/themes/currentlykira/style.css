@@ -17,12 +17,17 @@ currentlykira is distributed under the terms of the GNU GPL
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
 .sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
 
-div, p, h1, h2, h3, a, span {
+div, p, h1, h3, a, span {
   font-family: 'Josefin Sans', sans-serif;
+}
+
+h2, h2 a {
+  font-family: 'Playfair Display', serif;
 }
 
 h1, h2, h3 {
   text-transform: uppercase;
+  color: black;
 }
 
 a, a:hover {
@@ -158,14 +163,14 @@ a, a:hover {
   font-size: 1.5rem;
   text-align: center;
   line-height: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: black;
 }
 
 .entry-3 .entry-title {
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .entry-line {
@@ -219,7 +224,7 @@ a, a:hover {
 }
 
 .category-title {
-  font-weight: bold;
+  font-weight: 700;
   color: black;
 }
 
@@ -315,6 +320,10 @@ a, a:hover {
   padding: 0;
   margin-top: 1rem;
   line-height: 1rem;
+}
+
+.entry h1 {
+  font-family: 'Playfair Display', serif;
 }
 
  /* Comments */
