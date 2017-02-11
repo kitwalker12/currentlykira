@@ -26,7 +26,14 @@
     </section>
   </nav>
   <section class="container site-title">
-    <h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a></h1>
+    <?php
+      $custom_logo_id = get_theme_mod( 'custom-logo' );
+      $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+    ?>
+    <?php echo $image; ?>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
+      <?php the_custom_logo() ?>
+    </a>
   </section>
   <section class="container site-body">
 <!-- END header -->

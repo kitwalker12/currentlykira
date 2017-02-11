@@ -52,7 +52,7 @@ a, a:hover {
   right: 0;
   z-index: 1;
   display: block;
-  height: 3rem;
+  height: 52px;
   background-color: white;
 }
 
@@ -64,13 +64,15 @@ a, a:hover {
 .navigation li {
   float: left;
   position: relative;
-  margin-right: 3rem;
+  margin-right: 40px;
+  margin-top: 12px;
 }
 
 .navigation a {
   display: inline;
-  font-size: 0.8rem;
-  line-height: 3.2rem;
+  font-size: 10px;
+  line-height: 24px;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
