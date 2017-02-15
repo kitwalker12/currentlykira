@@ -330,8 +330,8 @@ a:hover.entry-read-more {
 .entry-content .size-full {
   max-width: 1080px;
   height: auto;
-  width: 111%;
-  margin: 0 -5% 72px;
+  width: 100%;
+  margin: 0 auto 72px;
 }
 
 .entry-content h1, .entry-content h2 {
