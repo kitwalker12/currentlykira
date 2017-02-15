@@ -19,7 +19,7 @@
           <div class="entry-line">&nbsp;</div>
           <?php if ( get_post_meta( get_the_ID(), 'tagline', true ) ): ?>
             <p class="entry-tagline">
-              <?php echo get_post_meta( get_the_ID(), 'tagline', true ); ?>
+              <?php echo get_post_meta( get_the_ID(), 'tagline', true ); ?>&hellip;
             </p>
           <?php endif ?>
           <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" class="entry-read-more">
