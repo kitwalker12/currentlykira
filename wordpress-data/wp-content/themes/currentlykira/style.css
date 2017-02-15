@@ -115,6 +115,10 @@ a, a:hover {
   min-height: 300px;
 }
 
+.entry-3 a:hover .img-container {
+  opacity: 0.8;
+}
+
 .entry-nav-below .img-container {
   padding-bottom: 100%;
   margin: 121px 0 0;
