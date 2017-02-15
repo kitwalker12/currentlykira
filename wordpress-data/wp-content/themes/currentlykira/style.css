@@ -235,6 +235,11 @@ a, a:hover {
   color: #191919;
 }
 
+a:hover.entry-read-more {
+  color: white;
+  background-color: black;
+}
+
 .entry-latest-posts {
   margin-top: 56px;
   padding-bottom: 24px;
