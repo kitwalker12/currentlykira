@@ -13,6 +13,7 @@
 <!-- Theme Stylesheet -->
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 <?php wp_head(); ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body <?php body_class(); ?>>
 <!-- <div id="search">

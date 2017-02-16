@@ -84,4 +84,30 @@ function theme_prefix_the_custom_logo() {
   }
 }
 
-
+// Add Youtube Settings
+function currentlykira_customize_register( $wp_customize ) {
+   //All our sections, settings, and controls will be added here
+  $wp_customize->add_setting( 'youtube_channel' , array(
+    'default'     => 'XYZ',
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_setting( 'youtube_api_key' , array(
+    'default'     => 'XYZ',
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_section( 'currentlykira_social' , array(
+    'title'      => __( 'Social', 'currentlykira' ),
+    'priority'   => 30,
+  ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_youtube_channel', array(
+    'label'        => __( 'Youtube Channel ID', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'youtube_channel',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_youtube_api', array(
+    'label'        => __( 'Youtube API Key', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'youtube_api_key',
+  ) ) );
+}
+add_action( 'customize_register', 'currentlykira_customize_register' );
