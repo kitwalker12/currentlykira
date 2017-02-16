@@ -4,7 +4,7 @@
   <div class="column column-25 entry">
     <article class="entry-info">
       <h3 class="entry-hashtag">
-        #CURRENTLYREDCARPET
+        #CURRENTLYKIRA
       </h3>
       <h2 class="entry-title">
         <a href="#" title="" rel="bookmark">
