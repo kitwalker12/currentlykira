@@ -95,8 +95,16 @@ function currentlykira_customize_register( $wp_customize ) {
     'default'     => '',
     'transport'   => 'refresh',
   ) );
+  $wp_customize->add_setting( 'google_analytics' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+  ) );
   $wp_customize->add_section( 'currentlykira_social' , array(
     'title'      => __( 'Social', 'currentlykira' ),
+    'priority'   => 30,
+  ) );
+  $wp_customize->add_section( 'currentlykira_analytics' , array(
+    'title'      => __( 'Analytics', 'currentlykira' ),
     'priority'   => 30,
   ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_youtube_channel', array(
@@ -108,6 +116,11 @@ function currentlykira_customize_register( $wp_customize ) {
     'label'        => __( 'Youtube API Key', 'currentlykira' ),
     'section'    => 'currentlykira_social',
     'settings'   => 'youtube_api_key',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_analytics_google_analytics', array(
+    'label'        => __( 'Google Analytics', 'currentlykira' ),
+    'section'    => 'currentlykira_analytics',
+    'settings'   => 'google_analytics',
   ) ) );
 }
 add_action( 'customize_register', 'currentlykira_customize_register' );
