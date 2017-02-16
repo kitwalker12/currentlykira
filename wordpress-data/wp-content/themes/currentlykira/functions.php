@@ -88,11 +88,11 @@ function theme_prefix_the_custom_logo() {
 function currentlykira_customize_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
   $wp_customize->add_setting( 'youtube_channel' , array(
-    'default'     => 'XYZ',
+    'default'     => '',
     'transport'   => 'refresh',
   ) );
   $wp_customize->add_setting( 'youtube_api_key' , array(
-    'default'     => 'XYZ',
+    'default'     => '',
     'transport'   => 'refresh',
   ) );
   $wp_customize->add_section( 'currentlykira_social' , array(

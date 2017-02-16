@@ -5,6 +5,7 @@
   <header><?php edit_post_link(); ?></header>
 <?php endwhile; endif; ?>
 
+<?php if (get_theme_mod('youtube_api_key') && get_theme_mod('youtube_channel')): ?>
 <div class="row">
   <div class="column">
     <h2 class="entry-latest-posts">
@@ -12,6 +13,7 @@
     </h2>
   </div>
 </div>
+<?php endif ?>
 
 <div id="videos"></div>
 
@@ -64,8 +66,8 @@
                   }
                 });
               })
-              .fail(function() {
-                console.log("error");
+              .fail(function(error) {
+                console.log(error);
               })
               .always(function() {});
             }
