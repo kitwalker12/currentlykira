@@ -527,6 +527,20 @@ cite.fn {
   border-top: 16px solid #191919;
 }
 
+/* Social */
+
+.navigation li a.fa, .footer-nav li a.fa {
+  font-size: inherit;
+}
+
+.navigation li.social {
+  margin-right: 24px;
+}
+
+.footer-nav li.social {
+  margin: 49.6px 7px 79.4px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {

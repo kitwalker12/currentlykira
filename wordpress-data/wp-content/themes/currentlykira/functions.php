@@ -84,7 +84,7 @@ function theme_prefix_the_custom_logo() {
   }
 }
 
-// Add Youtube/GA Settings
+// Add Youtube/GA/Facebook/Instagram Settings
 function currentlykira_customize_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
   $wp_customize->add_setting( 'youtube_channel' , array(
@@ -95,10 +95,19 @@ function currentlykira_customize_register( $wp_customize ) {
     'default'     => '',
     'transport'   => 'refresh',
   ) );
+  $wp_customize->add_setting( 'facebook' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_setting( 'instagram' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+  ) );
   $wp_customize->add_setting( 'google_analytics' , array(
     'default'     => '',
     'transport'   => 'refresh',
   ) );
+
   $wp_customize->add_section( 'currentlykira_social' , array(
     'title'      => __( 'Social', 'currentlykira' ),
     'priority'   => 30,
@@ -107,6 +116,7 @@ function currentlykira_customize_register( $wp_customize ) {
     'title'      => __( 'Analytics', 'currentlykira' ),
     'priority'   => 30,
   ) );
+
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_youtube_channel', array(
     'label'        => __( 'Youtube Channel ID', 'currentlykira' ),
     'section'    => 'currentlykira_social',
@@ -121,6 +131,16 @@ function currentlykira_customize_register( $wp_customize ) {
     'label'        => __( 'Google Analytics', 'currentlykira' ),
     'section'    => 'currentlykira_analytics',
     'settings'   => 'google_analytics',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_facebook', array(
+    'label'        => __( 'Facebook', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'facebook',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_instagram', array(
+    'label'        => __( 'Instagram', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'instagram',
   ) ) );
 }
 add_action( 'customize_register', 'currentlykira_customize_register' );
