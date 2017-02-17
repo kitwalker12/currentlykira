@@ -84,7 +84,7 @@ function theme_prefix_the_custom_logo() {
   }
 }
 
-// Add Youtube Settings
+// Add Youtube/GA Settings
 function currentlykira_customize_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
   $wp_customize->add_setting( 'youtube_channel' , array(
@@ -124,3 +124,6 @@ function currentlykira_customize_register( $wp_customize ) {
   ) ) );
 }
 add_action( 'customize_register', 'currentlykira_customize_register' );
+
+// Don't compress images
+add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
