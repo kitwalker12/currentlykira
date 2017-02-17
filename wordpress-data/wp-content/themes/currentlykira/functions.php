@@ -11,10 +11,6 @@ function currentlykira_setup() {
   array( 'main-menu' => __( 'Main Menu', 'currentlykira' ) )
   );
 }
-add_action( 'wp_enqueue_scripts', 'currentlykira_load_scripts' );
-function currentlykira_load_scripts() {
-  wp_enqueue_script( 'jquery' );
-}
 add_action( 'comment_form_before', 'currentlykira_enqueue_comment_reply_script' );
 function currentlykira_enqueue_comment_reply_script() {
   if ( get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }
@@ -107,13 +103,21 @@ function currentlykira_customize_register( $wp_customize ) {
     'default'     => '',
     'transport'   => 'refresh',
   ) );
+  $wp_customize->add_setting( 'instagram_client' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_setting( 'instagram_user_id' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+  ) );
+  $wp_customize->add_setting( 'instagram_access_token' , array(
+    'default'     => '',
+    'transport'   => 'refresh',
+  ) );
 
   $wp_customize->add_section( 'currentlykira_social' , array(
     'title'      => __( 'Social', 'currentlykira' ),
-    'priority'   => 30,
-  ) );
-  $wp_customize->add_section( 'currentlykira_analytics' , array(
-    'title'      => __( 'Analytics', 'currentlykira' ),
     'priority'   => 30,
   ) );
 
@@ -127,23 +131,45 @@ function currentlykira_customize_register( $wp_customize ) {
     'section'    => 'currentlykira_social',
     'settings'   => 'youtube_api_key',
   ) ) );
-  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_analytics_google_analytics', array(
-    'label'        => __( 'Google Analytics', 'currentlykira' ),
-    'section'    => 'currentlykira_analytics',
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_google_analytics', array(
+    'label'        => __( 'Google Analytics ID', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
     'settings'   => 'google_analytics',
   ) ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_facebook', array(
-    'label'        => __( 'Facebook', 'currentlykira' ),
+    'label'        => __( 'Facebook URL', 'currentlykira' ),
     'section'    => 'currentlykira_social',
     'settings'   => 'facebook',
   ) ) );
   $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_instagram', array(
-    'label'        => __( 'Instagram', 'currentlykira' ),
+    'label'        => __( 'Instagram URL', 'currentlykira' ),
     'section'    => 'currentlykira_social',
     'settings'   => 'instagram',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_instagram_client', array(
+    'label'        => __( 'Instagram Client ID', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'instagram_client',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_instagram_user_id', array(
+    'label'        => __( 'Instagram User ID', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'instagram_user_id',
+  ) ) );
+  $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'currentlykira_social_instagram_access_token', array(
+    'label'        => __( 'Instagram Access Token', 'currentlykira' ),
+    'section'    => 'currentlykira_social',
+    'settings'   => 'instagram_access_token',
   ) ) );
 }
 add_action( 'customize_register', 'currentlykira_customize_register' );
 
 // Don't compress images
 add_filter( 'jpeg_quality', create_function( '', 'return 100;' ) );
+
+// Add Instafeed
+function load_instafeed() {
+  wp_register_script( 'instafeed', get_template_directory_uri() . '/js/instafeed.min.js' );
+  wp_enqueue_script( 'instafeed' );
+}
+add_action( 'wp_enqueue_scripts', 'load_instafeed' );

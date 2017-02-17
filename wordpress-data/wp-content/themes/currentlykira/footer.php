@@ -1,4 +1,25 @@
 <!-- footer -->
+    <div class="row">
+      <div class="column">
+        <div id="instafeed"></div>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            try {
+              var feed = new Instafeed({
+                clientId: "<?php echo get_theme_mod('instagram_client') ?>",
+                target: "instafeed",
+                limit: 6,
+                get: "user",
+                userId: <?php echo get_theme_mod('instagram_user_id') ?>,
+                accessToken: "<?php echo get_theme_mod('instagram_access_token') ?>"
+              });
+
+              feed.run();
+            } catch(err) {}
+          });
+        </script>
+      </div>
+    </div>
   </section>
   <footer class="site-footer">
     <section class="container">

@@ -651,6 +651,14 @@ cite.fn {
   #comments .form-submit input[type='submit'] {
     top: -280px;
   }
+
+  .navigation li.social {
+    display: none;
+  }
+
+  .footer-nav li.social {
+    display: none;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
