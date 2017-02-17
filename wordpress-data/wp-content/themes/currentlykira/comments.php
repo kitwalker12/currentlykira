@@ -2,7 +2,7 @@
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
 <section id="comments">
   <div class="row comments">
-    <div class="column">
+    <div class="column comments-count">
       <?php if (condition): ?>
         COMMENTS(<?php comments_number('0', '1', '%') ?>)
       <?php endif ?>
@@ -14,27 +14,27 @@
         <?php
           $fields =  array(
             'author' =>
-              '<p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
-              ( $req ? '<span class="required">*</span>' : '' ) .
+              '<div class="row"><div class="column column-50"><p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) .
+                ( $req ? '&#42;' : '' ) . '</label> ' .
               '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-              '" size="30"' . $aria_req . ' /></p>',
+              '" size="30"' . $aria_req . ' /></p></div>',
 
             'email' =>
-              '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
-              ( $req ? '<span class="required">*</span>' : '' ) .
+              '<div class="column column-50"><p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) .
+                ( $req ? '&#42;' : '' ) . '</label> ' .
               '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-              '" size="30"' . $aria_req . ' /></p>',
+              '" size="30"' . $aria_req . ' /></p></div></div>',
 
             'url' => '',
           );
           $custom_args = array(
             'title_reply'       => __( '' ),
             'title_reply_to'    => __( '' ),
-            'cancel_reply_link' => __( 'CANCEL' ),
+            'cancel_reply_link' => __( 'CANCEL REPLY' ),
             'label_submit'      => __( 'POST COMMENT...' ),
 
-            'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
-              '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
+            'comment_field' =>  '<p class="comment-form-comment">' .
+              '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
               '</textarea></p>',
 
             'must_log_in' => '',
@@ -45,6 +45,7 @@
           );
         ?>
         <?php comment_form($custom_args); ?>
+
       <?php endif ?>
     </div>
   </div>

@@ -23,8 +23,6 @@
 <?php $count = $count + 1; ?>
 <?php endwhile; endif; ?>
 
-<?php get_template_part( 'nav', 'below' ); ?>
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 <!-- END category -->
