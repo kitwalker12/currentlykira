@@ -367,6 +367,8 @@ a:hover.entry-read-more {
 
 .entry-content .aligncenter {
   text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .entry-content .alignleft {
