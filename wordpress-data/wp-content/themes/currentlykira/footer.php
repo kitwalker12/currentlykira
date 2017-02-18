@@ -4,7 +4,7 @@
         <h2 class="instagram">
           INSTAGRAM
         </h2>
-        <a href="<?php get_theme_mod('instagram') ?>" class="instagram-link" target="_blank">
+        <a href="<?php echo get_theme_mod('instagram') ?>" class="instagram-link" target="_blank">
           <?php echo "@".basename(get_theme_mod('instagram')) ?>
         </a>
         <div id="instafeed"></div>
