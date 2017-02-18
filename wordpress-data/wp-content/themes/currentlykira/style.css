@@ -613,6 +613,16 @@ input[type='submit'].search-submit {
   border-color: black;
 }
 
+/* Shop Widget */
+
+h3.widget-title {
+  font-size: 10px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 40px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {

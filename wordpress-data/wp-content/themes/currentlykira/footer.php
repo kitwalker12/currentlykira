@@ -31,6 +31,9 @@
   </section>
   <footer class="site-footer">
     <section class="container">
+      <div class="row footer-sidebar">
+        <?php get_sidebar('footer-widget-area'); ?>
+      </div>
       <div class="row">
         <div class="column column-25">
           <div class="footer-title">

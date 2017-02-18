@@ -6,6 +6,7 @@
   <?php if ($count == 0): ?>
     <?php get_template_part( 'entry', '1' ); ?>
     <?php comments_template(); ?>
+    <?php get_sidebar('homepage-widget-area'); ?>
   <?php endif ?>
   <?php if ($count == 1): ?>
     <div class="row">

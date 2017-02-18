@@ -30,10 +30,28 @@ function currentlykira_filter_wp_title( $title ) {
 add_action( 'widgets_init', 'currentlykira_widgets_init' );
 function currentlykira_widgets_init() {
   register_sidebar( array (
-  'name' => __( 'Sidebar Widget Area', 'currentlykira' ),
+  'name' => __( 'Above Footer Area', 'currentlykira' ),
   'id' => 'primary-widget-area',
-  'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-  'after_widget' => "</li>",
+  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+  'after_widget' => "</div>",
+  'before_title' => '<h3 class="widget-title">',
+  'after_title' => '</h3>',
+  ) );
+
+  //Add Sidebars
+  register_sidebar( array (
+  'name' => __( 'Inside Footer Area', 'currentlykira' ),
+  'id' => 'footer-widget-area',
+  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+  'after_widget' => "</div>",
+  'before_title' => '<h3 class="widget-title">',
+  'after_title' => '</h3>',
+  ) );
+  register_sidebar( array (
+  'name' => __( 'Homepage Middle Area', 'currentlykira' ),
+  'id' => 'homepage-widget-area',
+  'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+  'after_widget' => "</div>",
   'before_title' => '<h3 class="widget-title">',
   'after_title' => '</h3>',
   ) );
