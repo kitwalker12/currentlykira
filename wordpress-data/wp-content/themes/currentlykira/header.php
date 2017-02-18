@@ -17,9 +17,6 @@
 <script src="https://use.fontawesome.com/e8efe8b873.js"></script>
 </head>
 <body <?php body_class(); ?>>
-<!-- <div id="search">
-<?php /*get_search_form();*/ ?>
-</div> -->
 
 <!-- GA -->
 <script>
@@ -38,6 +35,9 @@
   <nav class="navigation">
     <section class="container">
       <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false, 'menu_class' => 'float-left' ) ); ?>
+      <div id="search">
+        <?php get_search_form(); ?>
+      </div>
       <ul class="float-right">
         <li class="social"><a target="_blank" href="<?php echo get_theme_mod('instagram') ?>" class='fa fa-instagram'></a></li>
         <li class="social"><a target="_blank" href="<?php echo get_theme_mod('facebook') ?>" class='fa fa-facebook-official'></a></li>

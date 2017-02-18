@@ -1,26 +1,32 @@
 <!-- search -->
 <?php get_header(); ?>
-<section id="content" role="main">
+
+<?php $count = 0; ?>
 <?php if ( have_posts() ) : ?>
-<header class="header">
-<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'currentlykira' ), get_search_query() ); ?></h1>
-</header>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
+  <?php while ( have_posts() ) : the_post(); ?>
+    <?php if ($count == 0): ?>
+      <div class="row">
+        <div class="column">
+          <h2 class="entry-latest-posts">
+            <?php printf( __( 'Search Results for: <span class="category-title">%s</span>', 'currentlykira' ), get_search_query() ); ?>
+          </h2>
+        </div>
+      </div>
+    <?php endif ?>
+    <?php get_template_part( 'entry', 'search' ); ?>
+    <?php comments_template(); ?>
+    <?php $count = $count + 1; ?>
+  <?php endwhile; ?>
 <?php else : ?>
-<article id="post-0" class="post no-results not-found">
-<header class="header">
-<h2 class="entry-title"><?php _e( 'Nothing Found', 'currentlykira' ); ?></h2>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'currentlykira' ); ?></p>
-<?php get_search_form(); ?>
-</section>
-</article>
+  <div class="row">
+    <div class="column">
+      <h2 class="entry-latest-posts">
+        <?php _e( 'Sorry, nothing matched your search. Please try again.', 'currentlykira' ); ?>
+      </h2>
+    </div>
+  </div>
 <?php endif; ?>
-</section>
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
 <!-- END search -->
