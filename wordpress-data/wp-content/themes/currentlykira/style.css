@@ -542,6 +542,10 @@ cite.fn {
   margin: 49.6px 7px 79.4px;
 }
 
+.instagram-widget {
+  position: relative;
+}
+
 #instafeed {
   position: relative;
   display: flex;
@@ -553,33 +557,26 @@ cite.fn {
   margin-top: -5px;
 }
 
-.instagram {
-  margin-top: 120px;
-  text-align: center;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: black;
-  font-size: 2rem;
-  letter-spacing: 1px;
-  margin-left: -2rem;
-  margin-right: -2rem;
-}
-
 .instagram-image {
-  width: 16.667%;
+  width: 12.5%;
   margin-bottom: -5px;
+  margin-top: 120px;
 }
 
 .instagram-link {
   position: absolute;
   z-index: 1;
-  left: calc(50% - 130px/2);
-  width: 130px;
+  left: calc(50% - 120px);
+  top: 90px;
+  height: 48px;
+  width: 240px;
   background-color: white;
-  border: 1px solid black;
-  padding: 10px;
-  margin-top: 20px;
+  border: 2px solid black;
+  padding: 15px 0 9px;
   text-align: center;
+  font-size: 20px;
+  line-height: 15px;
+  letter-spacing: 4px;
 }
 
 /* Search */

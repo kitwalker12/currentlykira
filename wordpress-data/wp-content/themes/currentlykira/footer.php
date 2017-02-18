@@ -1,9 +1,6 @@
 <!-- footer -->
     <div class="row">
-      <div class="column">
-        <h2 class="instagram">
-          INSTAGRAM
-        </h2>
+      <div class="column instagram-widget">
         <a href="<?php echo get_theme_mod('instagram') ?>" class="instagram-link" target="_blank">
           <?php echo "@".basename(get_theme_mod('instagram')) ?>
         </a>
@@ -14,7 +11,7 @@
               var feed = new Instafeed({
                 clientId: "<?php echo get_theme_mod('instagram_client') ?>",
                 target: "instafeed",
-                limit: 6,
+                limit: 8,
                 get: "user",
                 userId: <?php echo get_theme_mod('instagram_user_id') ?>,
                 accessToken: "<?php echo get_theme_mod('instagram_access_token') ?>",
