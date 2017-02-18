@@ -1,6 +1,12 @@
 <!-- footer -->
     <div class="row">
       <div class="column">
+        <h2 class="instagram">
+          INSTAGRAM
+        </h2>
+        <a href="<?php get_theme_mod('instagram') ?>" class="instagram-link" target="_blank">
+          <?php echo "@".basename(get_theme_mod('instagram')) ?>
+        </a>
         <div id="instafeed"></div>
         <script type="text/javascript">
           $(document).ready(function() {
@@ -11,7 +17,9 @@
                 limit: 6,
                 get: "user",
                 userId: <?php echo get_theme_mod('instagram_user_id') ?>,
-                accessToken: "<?php echo get_theme_mod('instagram_access_token') ?>"
+                accessToken: "<?php echo get_theme_mod('instagram_access_token') ?>",
+                template: '<a href="{{link}}" class="instagram-image" target="_blank"><img src="{{image}}" /></a>',
+                resolution: "low_resolution"
               });
 
               feed.run();
@@ -32,9 +40,9 @@
         <div class="column column-75">
           <div class="footer-nav">
             <ul class="float-right">
-              <li class="social instagram"><a target="_blank" href="<?php echo get_theme_mod('instagram') ?>" class='fa fa-instagram'></a></li>
-              <li class="social facebook"><a target="_blank" href="<?php echo get_theme_mod('facebook') ?>" class='fa fa-facebook-official'></a></li>
-              <li class="social youtube"><a target="_blank" href="https://www.youtube.com/channel/<?php echo get_theme_mod('youtube_channel') ?>" class='fa fa-youtube-play'></a></li>
+              <li class="social"><a target="_blank" href="<?php echo get_theme_mod('instagram') ?>" class='fa fa-instagram'></a></li>
+              <li class="social"><a target="_blank" href="<?php echo get_theme_mod('facebook') ?>" class='fa fa-facebook-official'></a></li>
+              <li class="social"><a target="_blank" href="https://www.youtube.com/channel/<?php echo get_theme_mod('youtube_channel') ?>" class='fa fa-youtube-play'></a></li>
             </ul>
             <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false, 'menu_class' => 'float-right' ) ); ?>
           </div>

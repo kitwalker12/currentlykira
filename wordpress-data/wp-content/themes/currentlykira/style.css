@@ -281,7 +281,6 @@ a:hover.entry-read-more {
   background-color: #373737;
   color: white;
   letter-spacing: 0.1rem;
-  margin-top: 119.7px;
 }
 
 .site-footer a {
@@ -541,6 +540,46 @@ cite.fn {
   margin: 49.6px 7px 79.4px;
 }
 
+#instafeed {
+  position: relative;
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  margin-top: -5px;
+}
+
+.instagram {
+  margin-top: 120px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: black;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.instagram-image {
+  width: 16.667%;
+  margin-bottom: -5px;
+}
+
+.instagram-link {
+  position: absolute;
+  z-index: 1;
+  left: calc(50% - 130px/2);
+  width: 130px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {
@@ -658,6 +697,10 @@ cite.fn {
 
   .footer-nav li.social {
     display: none;
+  }
+
+  .instagram-link {
+    margin-top: 0px;
   }
 }
 

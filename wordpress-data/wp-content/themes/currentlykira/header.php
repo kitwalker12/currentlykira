@@ -39,9 +39,9 @@
     <section class="container">
       <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => false, 'menu_class' => 'float-left' ) ); ?>
       <ul class="float-right">
-        <li class="social instagram"><a target="_blank" href="<?php echo get_theme_mod('instagram') ?>" class='fa fa-instagram'></a></li>
-        <li class="social facebook"><a target="_blank" href="<?php echo get_theme_mod('facebook') ?>" class='fa fa-facebook-official'></a></li>
-        <li class="social youtube"><a target="_blank" href="https://www.youtube.com/channel/<?php echo get_theme_mod('youtube_channel') ?>" class='fa fa-youtube-play'></a></li>
+        <li class="social"><a target="_blank" href="<?php echo get_theme_mod('instagram') ?>" class='fa fa-instagram'></a></li>
+        <li class="social"><a target="_blank" href="<?php echo get_theme_mod('facebook') ?>" class='fa fa-facebook-official'></a></li>
+        <li class="social"><a target="_blank" href="https://www.youtube.com/channel/<?php echo get_theme_mod('youtube_channel') ?>" class='fa fa-youtube-play'></a></li>
       </ul>
     </section>
   </nav>
