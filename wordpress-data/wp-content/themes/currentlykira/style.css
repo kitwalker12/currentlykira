@@ -339,13 +339,14 @@ a:hover.entry-read-more {
   margin: 0 auto 72px;
 }
 
-.entry-content h1, .entry-content h2 {
+.entry-content h1, .entry-content h2, .entry-content h3 {
   font-size: 32px;
   line-height: 1.25;
   letter-spacing: 3px;
   color: #191919;
   margin-bottom: 40px;
   padding: 0 8rem;
+  font-family: 'Playfair Display', serif;
 }
 
 .entry-content p {
