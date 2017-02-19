@@ -92,12 +92,12 @@ a, a:hover {
 .img-container {
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 40%;
+  padding-bottom: 56%;
   position: relative;
 }
 
 .entry-1 .img-container {
-  padding-bottom: 40%;
+  padding-bottom: 56%;
   margin-bottom: 1rem;
 }
 
@@ -422,6 +422,10 @@ a:hover.entry-read-more {
   border-radius: 0;
   height: 200px;
   background-color: white;
+}
+
+#comments textarea:focus {
+  border-color: black;
 }
 
 #comments input[type='text'] {
