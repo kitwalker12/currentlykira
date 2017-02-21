@@ -396,6 +396,15 @@ a:hover.entry-read-more {
   font-family: 'Playfair Display', serif;
 }
 
+.entry-content h1 a, .entry-content h2 a, .entry-content h3 a, .entry-content p a  {
+  text-decoration: underline;
+}
+
+.entry-content h1 a:hover, .entry-content h2 a:hover, .entry-content h3 a:hover, .entry-content p a:hover {
+  text-decoration: underline;
+  opacity: 0.5;
+}
+
 /* Comments */
 
 #comments {
