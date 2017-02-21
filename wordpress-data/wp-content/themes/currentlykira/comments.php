@@ -18,13 +18,13 @@
         <?php
           $fields =  array(
             'author' =>
-              '<div class="row"><div class="column column-50"><p class="comment-form-author"><label for="author">' . __( 'Name', 'domainreference' ) .
+              '<div class="row"><div class="column column-50"><p class="comment-form-author"><label for="author">' . __( 'Name', 'currentlykira' ) .
                 ( $req ? '&#42;' : '' ) . '</label> ' .
               '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
               '" size="30"' . $aria_req . ' /></p></div>',
 
             'email' =>
-              '<div class="column column-50"><p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) .
+              '<div class="column column-50"><p class="comment-form-email"><label for="email">' . __( 'Email', 'currentlykira' ) .
                 ( $req ? '&#42;' : '' ) . '</label> ' .
               '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
               '" size="30"' . $aria_req . ' /></p></div></div>',
@@ -32,10 +32,10 @@
             'url' => '',
           );
           $custom_args = array(
-            'title_reply'       => __( '' ),
-            'title_reply_to'    => __( '' ),
-            'cancel_reply_link' => __( 'CANCEL REPLY' ),
-            'label_submit'      => __( 'POST COMMENT...' ),
+            'title_reply'       => __( '', 'currentlykira' ),
+            'title_reply_to'    => __( '', 'currentlykira' ),
+            'cancel_reply_link' => __( 'CANCEL REPLY', 'currentlykira' ),
+            'label_submit'      => __( 'POST COMMENT...', 'currentlykira' ),
 
             'comment_field' =>  '<p class="comment-form-comment">' .
               '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .

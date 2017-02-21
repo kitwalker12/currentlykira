@@ -104,34 +104,42 @@ function currentlykira_customize_register( $wp_customize ) {
   $wp_customize->add_setting( 'youtube_channel' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'youtube_api_key' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'facebook' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'instagram' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'google_analytics' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'instagram_client' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'instagram_user_id' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
   $wp_customize->add_setting( 'instagram_access_token' , array(
     'default'     => '',
     'transport'   => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field'
   ) );
 
   $wp_customize->add_section( 'currentlykira_social' , array(

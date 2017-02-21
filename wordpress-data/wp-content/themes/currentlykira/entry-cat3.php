@@ -17,10 +17,7 @@
     </article>
     <header>
       <?php edit_post_link(); ?>
-      <?#php if ( !is_search() ) get_template_part( 'entry', 'meta' ); ?>
     </header>
-    <?#php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
-    <?#php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
   </article>
 </div>
 <?php if (($wp_query->current_post % 3 == 0) || ($wp_query->current_post + 1) == ($wp_query->post_count)) {
