@@ -17,6 +17,39 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- Font Awesome -->
 <script src="https://use.fontawesome.com/e8efe8b873.js"></script>
+
+<!-- Google Structured Data -->
+<?php
+  $custom_logo_id = get_theme_mod( 'custom_logo' );
+  $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+?>
+<script type="application/ld+json">
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "<?php echo esc_html( get_bloginfo( 'name' ) ); ?>",
+    "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "<?php echo esc_url( home_url( '/' ) ); ?>s?q={s}",
+      "query-input": "required name=s"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+    "logo": "<?php echo $image[0] ?>",
+    "sameAs": [
+      "<?php echo get_theme_mod('instagram') ?>",
+      "<?php echo get_theme_mod('facebook') ?>",
+      "https://www.youtube.com/channel/<?php echo get_theme_mod('youtube_channel') ?>"
+    ]
+  }
+]
+</script>
+<!-- END Google Structured Data -->
 </head>
 <body <?php body_class(); ?>>
 

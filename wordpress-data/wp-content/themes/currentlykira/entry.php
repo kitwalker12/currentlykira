@@ -1,4 +1,42 @@
 <!-- entry -->
+<?php
+  $custom_logo_id = get_theme_mod( 'custom_logo' );
+  $image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+?>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "<?php the_title(); ?>",
+  "image": {
+    "@type": "ImageObject",
+    "url": "<?php the_post_thumbnail_url('medium'); ?>",
+    "height": "200",
+    "width": "300"
+  },
+  "datePublished": "<?php the_time('c'); ?>",
+  "dateModified": "<?php the_time('c'); ?>",
+  "author": {
+    "@type": "Person",
+    "name": "<?php the_author_meta('display_name') ?>"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "<?php echo esc_html( get_bloginfo( 'name' ) ); ?>",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "<?php echo $image[0] ?>",
+      "width": 426,
+      "height": 36
+    }
+  },
+  "description": "<?php echo get_post_meta( get_the_ID(), 'tagline', true ); ?>"
+}
+</script>
 <header><?php edit_post_link(); ?></header>
 <div class="row">
   <div class="column">
