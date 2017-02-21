@@ -1,6 +1,10 @@
 <!-- comments -->
 <?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
 <section id="comments">
+  <div class="row comments entry-social">
+    <div class="fb-share-button" data-href="<?php the_permalink(); ?>" data-layout="button" data-size="small" data-mobile-iframe="true"></div>
+    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+  </div>
   <div class="row comments">
     <div class="column comments-count">
       <?php if (condition): ?>

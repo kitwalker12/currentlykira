@@ -703,6 +703,16 @@ label.mc_header_email {
   background-color: black;
 }
 
+/* Post Social Share */
+.entry-social {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fb-share-button, .twitter-share-button {
+  margin-right: 20px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {
