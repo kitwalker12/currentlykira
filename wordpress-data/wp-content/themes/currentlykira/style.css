@@ -151,7 +151,7 @@ a, a:hover {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
-  right: 23%;
+  right: calc(50% - 142px);
   left: auto;
   top: 25%;
   padding: 80px 67px;
