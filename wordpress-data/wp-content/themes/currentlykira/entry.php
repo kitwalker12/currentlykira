@@ -41,8 +41,9 @@
 <div class="row">
   <div class="column">
     <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
-      <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)">
-      </div>
+      <?php if (has_post_thumbnail()): ?>
+        <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)"></div>
+      <?php endif ?>
       <article class="entry-info">
         <h3 class="entry-hashtag">
           <?php if ( get_post_meta( get_the_ID(), 'hashtag', true ) ): ?>
