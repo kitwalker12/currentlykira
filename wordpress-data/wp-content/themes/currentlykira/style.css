@@ -630,6 +630,79 @@ h3.widget-title {
   border-bottom: 1px solid #dedede;
 }
 
+/* Mailchimp Widget */
+
+.widget_mailchimpsf_widget {
+  width: 284px;
+  margin: 0 auto;
+  padding: 60px 0;
+  background-color: white;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 147px);
+}
+
+.widget_mailchimpsf_widget .mc-header1 {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #191919;
+  padding: 4px;
+}
+
+.widget_mailchimpsf_widget .mc-header2 {
+  text-align: center;
+  padding: 4px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.widget_mailchimpsf_widget .mc-sub-header {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 36px;
+  font-size: 14px;
+  color: #191919;
+}
+
+label.mc_header_email {
+  display: none;
+}
+
+.widget_mailchimpsf_widget input[type='text'], .widget_mailchimpsf_widget input[type='submit'] {
+  padding: 0;
+  border: 1px solid black;
+  border-radius: 0;
+  width: 190px;
+  height: 30px;
+  margin: 10px auto;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 0;
+}
+
+.widget_mailchimpsf_widget input[type='submit'][disabled]:focus, .widget_mailchimpsf_widget input[type='submit'][disabled]:hover {
+  border-color: black;
+  background-color: black;
+}
+
+.widget_mailchimpsf_widget input[type='text']:focus {
+  border-color: black;
+}
+
+.mc_form_inside {
+  text-align: center;
+}
+
+.widget_mailchimpsf_widget input[type='submit'] {
+  background-color: black;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {
