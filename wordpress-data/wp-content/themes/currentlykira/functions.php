@@ -6,7 +6,7 @@ function currentlykira_setup() {
   add_theme_support( 'automatic-feed-links' );
   add_theme_support( 'post-thumbnails' );
   global $content_width;
-  if ( ! isset( $content_width ) ) $content_width = 640;
+  if ( ! isset( $content_width ) ) $content_width = 1440;
   register_nav_menus(
   array( 'main-menu' => __( 'Main Menu', 'currentlykira' ) )
   );
@@ -96,6 +96,19 @@ function theme_prefix_the_custom_logo() {
   if ( function_exists( 'the_custom_logo' ) ) {
     the_custom_logo();
   }
+}
+
+// Add Custome image size
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+function wpdocs_theme_setup() {
+  add_image_size( 'x-large', 1140 );
+}
+
+add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+function my_custom_sizes( $sizes ) {
+  return array_merge( $sizes, array(
+    'x-large' => __( 'X-Large' ),
+  ) );
 }
 
 // Add Youtube/GA/Facebook/Instagram Settings

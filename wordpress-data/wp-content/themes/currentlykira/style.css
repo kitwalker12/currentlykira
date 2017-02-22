@@ -224,14 +224,14 @@ a, a:hover {
 .entry-read-more {
   text-align: center;
   display: inline-block;
-  background-color: white;
+  background-color: black;
   height: 30px;
   width: 110px;
   margin-top: 27px;
   font-size: 8px;
   line-height: 4;
   letter-spacing: 0.8px;
-  color: #373737;
+  color: white;
 
 }
 
@@ -241,15 +241,15 @@ a, a:hover {
 
 .entry-tagline {
   margin-top: 16px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.6;
   letter-spacing: normal;
   color: #191919;
 }
 
 a:hover.entry-read-more {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: white;
 }
 
 .entry-latest-posts {
@@ -334,7 +334,7 @@ a:hover.entry-read-more {
   margin-left: 8rem;
 }
 
-.entry-content .size-full {
+.entry-content .size-full, .entry-content .size-x-large {
   max-width: 1080px;
   height: auto;
   width: 100%;
@@ -575,7 +575,7 @@ cite.fn {
 
 .instagram-image {
   width: 12.5%;
-  margin-bottom: -5px;
+  margin-bottom: -4px;
   margin-top: 120px;
 }
 

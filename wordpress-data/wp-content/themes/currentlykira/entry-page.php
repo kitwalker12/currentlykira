@@ -4,7 +4,7 @@
   <div class="row">
     <div class="column">
       <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
-        <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url('large'); ?>)">
+        <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url('x-large'); ?>)">
         </div>
       </article>
     </div>
