@@ -1,4 +1,4 @@
-<!-- entry-search -->
+<!-- entry-3col -->
 <?php if ($wp_query->current_post % 3 == 0) {
   echo "<div class='row'>";
 } ?>
@@ -23,4 +23,4 @@
 <?php if (($wp_query->current_post % 3 == 2) || ($wp_query->current_post + 1) == ($wp_query->post_count)) {
   echo "</div>";
 } ?>
-<!-- END entry-search -->
+<!-- END entry-3col -->

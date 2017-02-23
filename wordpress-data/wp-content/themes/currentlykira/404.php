@@ -6,7 +6,6 @@
 <h1 class="entry-title"><?php _e( 'Not Found', 'currentlykira' ); ?></h1>
 </header>
 <section class="entry-content">
-<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'currentlykira' ); ?></p>
 <?php get_search_form(); ?>
 </section>
 </article>

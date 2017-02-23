@@ -13,7 +13,7 @@
         </div>
       </div>
     <?php endif ?>
-    <?php get_template_part( 'entry', 'search' ); ?>
+    <?php get_template_part( 'entry', '3col' ); ?>
     <?php comments_template(); ?>
     <?php $count = $count + 1; ?>
   <?php endwhile; ?>
@@ -26,6 +26,17 @@
     </div>
   </div>
 <?php endif; ?>
+
+<div class="row">
+  <div class="column column-25 pagination-link">
+    <span class="prev-arrow"></span>
+    <?php previous_posts_link( 'Newer posts' ); ?>
+  </div>
+  <div class="column column-25 column-offset-50 pagination-link">
+    <?php next_posts_link( 'Older posts' ); ?>
+    <span class="next-arrow"></span>
+  </div>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

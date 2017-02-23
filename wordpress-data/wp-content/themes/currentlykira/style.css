@@ -724,6 +724,65 @@ label.mc_header_email {
   margin-right: 20px;
 }
 
+/* Pagination */
+.pagination-link {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.next-arrow {
+  background:black;
+  display:inline-block;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+}
+
+.next-arrow:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top:  2px;
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+
+.prev-arrow {
+  background:black;
+  display:inline-block;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+}
+
+.prev-arrow:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top:  2px;
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+
+.pagination-link > :only-child {
+  display: none;
+}
+
+.view-all-link {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 100px !important;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {

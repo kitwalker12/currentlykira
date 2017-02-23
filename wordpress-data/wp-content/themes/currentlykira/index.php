@@ -28,6 +28,21 @@
 <?php $count = $count + 1; ?>
 <?php endwhile; endif; ?>
 
+<?php $pages = get_pages(array(
+                'meta_key' => '_wp_page_template',
+                'meta_value' => 'page-all.php',
+                'number' => 1
+                )); ?>
+<?php if ($pages[0]): ?>
+  <div class="row">
+    <div class="column view-all-link">
+       <a href="<?php echo get_page_link($pages[0]->ID); ?>" class="entry-read-more">
+        VIEW ALL POSTS
+      </a>
+    </div>
+  </div>
+<?php endif ?>
+
 <?php get_template_part( 'nav', 'below' ); ?>
 
 <?php get_sidebar(); ?>
