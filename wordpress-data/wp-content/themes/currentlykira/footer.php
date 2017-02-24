@@ -30,6 +30,18 @@
     <section class="container">
       <div class="row footer-sidebar">
         <?php get_sidebar('footer-widget-area'); ?>
+        <script type="text/javascript">
+
+          $(document).ready(function() {
+            if ($('.widget_mailchimpsf_widget').length) {
+              $('.widget_mailchimpsf_widget').prepend('<a class="dismiss-mailchimp" href="#">DISMISS</a>');
+              $(".dismiss-mailchimp").off("click").on('click', function(e) {
+                $('.widget_mailchimpsf_widget').hide();
+              });;
+            }
+          });
+
+        </script>
       </div>
       <div class="row">
         <div class="column column-25">

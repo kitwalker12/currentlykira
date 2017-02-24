@@ -723,6 +723,10 @@ label.mc_header_email {
   background-color: black;
 }
 
+.widget_mailchimpsf_widget .mc_success_msg {
+  padding: 5px;
+}
+
 /* Post Social Share */
 .entry-social {
   margin: 0 auto;
