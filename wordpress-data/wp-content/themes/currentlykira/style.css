@@ -649,9 +649,18 @@ h3.widget-title {
   padding: 60px 0;
   background-color: white;
   display: none;
-  position: absolute;
-  top: 50px;
+  position: fixed;
+  top: 300px;
   left: calc(50% - 147px);
+  z-index: 2;
+  border: 1px solid black;
+}
+
+.widget_mailchimpsf_widget .dismiss-mailchimp {
+  top: 300px;
+  margin: 7px 5px;
+  position: fixed;
+  font-size: 13px;
 }
 
 .widget_mailchimpsf_widget .mc-header1 {
@@ -912,6 +921,14 @@ label.mc_header_email {
 
   .admin-bar .navigation {
     height: 66px;
+  }
+
+  .widget_mailchimpsf_widget {
+    top: 100px;
+  }
+
+  .widget_mailchimpsf_widget .dismiss-mailchimp {
+    top: 100px;
   }
 }
 
