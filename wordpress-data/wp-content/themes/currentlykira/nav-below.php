@@ -45,7 +45,6 @@
               .done(function(response) {
                 var video_html = ""
                 $.each(response.items, function(index, item) {
-                  var imageUrl = item.snippet.thumbnails.maxres.url;
                   var videoTitle = item.snippet.title;
                   var videoId = item.snippet.resourceId.videoId;
                   var videoUrl = "https://www.youtube.com/watch?v=" + videoId;
