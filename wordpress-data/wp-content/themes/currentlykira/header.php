@@ -50,6 +50,11 @@
 ]
 </script>
 <!-- END Google Structured Data -->
+
+<!-- RewardStyle -->
+<script>window.nastygoat = {aid:"1zzER76s8t4bOcXXDIK53N8azsUDRA3F-IF9Hie3d28i",pid:"ekTA5CDrOVNxLBwwEbRT3haRKiWJ7bRKJPaOUAmETqB7"};</script>
+<script type="text/javascript" src="//assets.rewardstyle.com/scriptmanager/rs-script-manager.js"></script>
+<!-- END RewardStyle -->
 </head>
 <body <?php body_class(); ?>>
 
