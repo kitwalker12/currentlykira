@@ -827,12 +827,16 @@ label.mc_header_email {
     margin-left: 5%;
   }
 
+  .navigation {
+    height: 119px;
+  }
+
   .navigation li {
     margin-right: 10px;
   }
 
   .navigation a {
-    font-size: 6px;
+    font-size: 10px;
   }
 
   .site-title img {
@@ -840,8 +844,15 @@ label.mc_header_email {
   }
 
   .site-title {
+    margin-top: 65px;
     padding-top: 30px;
     padding-bottom: 20px;
+  }
+
+  #search {
+    position: fixed;
+    right: 10px;
+    top: 44px;
   }
 
   .entry-1 .img-container, .entry-2 .img-container {
@@ -908,7 +919,7 @@ label.mc_header_email {
   }
 
   .navigation li.social {
-    display: none;
+    margin-top: 0px;
   }
 
   .footer-nav li.social {
@@ -933,6 +944,44 @@ label.mc_header_email {
 
   .widget_mailchimpsf_widget .dismiss-mailchimp {
     top: 100px;
+  }
+
+  .homepage-widget-area {
+    padding-bottom: 10px;
+  }
+
+  h3.widget-title {
+    margin-top: 10px;
+  }
+
+  .entry-latest-posts {
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  .entry-3 .entry-title {
+    margin-bottom: 10px;
+  }
+
+  .view-all-link {
+    margin-top: 10px;
+    margin-bottom: 10px !important;
+  }
+
+  .home .nav-below-single, .entry .entry-info {
+    padding: 10px 0;
+  }
+
+  .instagram-image {
+    margin-top: 25px;
+  }
+
+  .instagram-link {
+    top: 0;
+  }
+
+  .footer-nav {
+    display: none;
   }
 }
 
