@@ -828,6 +828,7 @@ label.mc_header_email {
   }
 
   .navigation {
+    z-index: 3;
     height: 119px;
   }
 
