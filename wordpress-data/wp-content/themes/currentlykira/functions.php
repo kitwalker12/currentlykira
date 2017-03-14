@@ -11,6 +11,10 @@ function currentlykira_setup() {
   array( 'main-menu' => __( 'Main Menu', 'currentlykira' ) )
   );
 }
+add_action( 'wp_enqueue_scripts', 'currentlykira_load_scripts' );
+function currentlykira_load_scripts() {
+ wp_enqueue_script( 'jquery' );
+}
 add_action( 'comment_form_before', 'currentlykira_enqueue_comment_reply_script' );
 function currentlykira_enqueue_comment_reply_script() {
   if ( get_option( 'thread_comments' ) ) { wp_enqueue_script( 'comment-reply' ); }

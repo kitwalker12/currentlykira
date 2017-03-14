@@ -14,7 +14,9 @@
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 <?php wp_head(); ?>
 <!-- JQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  var $=jQuery.noConflict();
+</script>
 <!-- Font Awesome -->
 <script src="https://use.fontawesome.com/e8efe8b873.js"></script>
 
