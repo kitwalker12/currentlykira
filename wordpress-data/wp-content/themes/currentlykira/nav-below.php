@@ -33,35 +33,29 @@
     })
     .done(function(response) {
       $.each(response.items, function(index, item) {
-        if (item.hasOwnProperty('contentDetails')) {
-          var contentDetails = item.contentDetails;
-          if (contentDetails.hasOwnProperty('relatedPlaylists')) {
-            var relatedPlaylists = contentDetails.relatedPlaylists;
-            if (relatedPlaylists.hasOwnProperty('uploads')) {
-              var playlistID = relatedPlaylists.uploads;
-              $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + playlistID + "&key=<?php echo get_theme_mod('youtube_api_key') ?>&maxResults=1"
-              })
-              .done(function(response) {
-                var video_html = ""
-                $.each(response.items, function(index, item) {
-                  var videoTitle = item.snippet.title;
-                  var videoId = item.snippet.resourceId.videoId;
-                  var videoUrl = "https://www.youtube.com/watch?v=" + videoId;
-                  video_html += "<a href='" + videoUrl + "' target='_blank' title='" + videoTitle + "'>" +
-                      "<div class='img-container'>" +
-                        "<iframe width='738' height='473' src='https://www.youtube.com/embed/" + videoId + "' frameborder='0' allowfullscreen></iframe>" +
-                      "</div>" +
-                    "</a>";
-                  $('#featured-video').html(video_html);
-                });
-              })
-              .fail(function(error) {
-                console.log(error);
-              })
-              .always(function() {});
-            }
-          }
+        if (item.hasOwnProperty('id')) {
+          var channelID = item.id;
+          $.ajax({
+            url: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=playlistitem&order=date&maxResults=1&channelId="+channelID+"&key=<?php echo get_theme_mod('youtube_api_key') ?>"
+          })
+          .done(function(response) {
+            var video_html = ""
+            $.each(response.items, function(index, item) {
+              var videoTitle = item.snippet.title;
+              var videoId = item.id.videoId;
+              var videoUrl = "https://www.youtube.com/watch?v=" + videoId;
+              video_html += "<a href='" + videoUrl + "' target='_blank' title='" + videoTitle + "'>" +
+                  "<div class='img-container'>" +
+                    "<iframe width='738' height='473' src='https://www.youtube.com/embed/" + videoId + "' frameborder='0' allowfullscreen></iframe>" +
+                  "</div>" +
+                "</a>";
+              $('#featured-video').html(video_html);
+            });
+          })
+          .fail(function(error) {
+            console.log(error);
+          })
+          .always(function() {});
         }
       });
     })

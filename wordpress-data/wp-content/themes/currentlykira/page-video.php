@@ -25,54 +25,48 @@
     })
     .done(function(response) {
       $.each(response.items, function(index, item) {
-        if (item.hasOwnProperty('contentDetails')) {
-          var contentDetails = item.contentDetails;
-          if (contentDetails.hasOwnProperty('relatedPlaylists')) {
-            var relatedPlaylists = contentDetails.relatedPlaylists;
-            if (relatedPlaylists.hasOwnProperty('uploads')) {
-              var playlistID = relatedPlaylists.uploads;
-              $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + playlistID + "&key=<?php echo get_theme_mod('youtube_api_key') ?>&maxResults=48"
-              })
-              .done(function(response) {
-                var count = response.items.length;
-                var video_html = ""
-                $.each(response.items, function(index, item) {
-                  if (index % 3 == 0) {
-                    video_html += "<div class='row'>";
-                  }
-                  var imageUrl = item.snippet.thumbnails.high.url;
-                  var videoTitle = item.snippet.title;
-                  var videoUrl = "https://www.youtube.com/watch?v=" + item.snippet.resourceId.videoId;
-                  video_html += "<div class='column column-33'>" +
-                    "<article class='entry-3'>" +
-                      "<a href='" + videoUrl + "' target='_blank' title='" + videoTitle + "'>" +
-                        "<div class='img-container' style='background-image: url(" + imageUrl + ")'>" +
-                        "</div>" +
+        if (item.hasOwnProperty('id')) {
+          var channelID = item.id;
+          $.ajax({
+            url: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=playlistitem&order=date&maxResults=48&channelId="+channelID+"&key=<?php echo get_theme_mod('youtube_api_key') ?>"
+          })
+          .done(function(response) {
+            var count = response.items.length;
+            var video_html = ""
+            $.each(response.items, function(index, item) {
+              if (index % 3 == 0) {
+                video_html += "<div class='row'>";
+              }
+              var imageUrl = item.snippet.thumbnails.high.url;
+              var videoTitle = item.snippet.title;
+              var videoUrl = "https://www.youtube.com/watch?v=" + item.id.videoId;
+              video_html += "<div class='column column-33'>" +
+                "<article class='entry-3'>" +
+                  "<a href='" + videoUrl + "' target='_blank' title='" + videoTitle + "'>" +
+                    "<div class='img-container' style='background-image: url(" + imageUrl + ")'>" +
+                    "</div>" +
+                  "</a>" +
+                  "<article class='entry-info'>" +
+                    "<h2 class='entry-title'>" +
+                      "<a href='" + videoUrl + "' target='_blank' rel='bookmark' title='" + videoTitle + "'>" +
+                        videoTitle +
                       "</a>" +
-                      "<article class='entry-info'>" +
-                        "<h2 class='entry-title'>" +
-                          "<a href='" + videoUrl + "' target='_blank' rel='bookmark' title='" + videoTitle + "'>" +
-                            videoTitle +
-                          "</a>" +
-                        "</h2>" +
-                      "</article>" +
-                    "</article>" +
-                  "</div>";
-                  if ((index % 3 == 2) || (index + 1 == count)) {
-                    video_html += "</div>";
-                  }
-                  if (index + 1 == count) {
-                    $('#videos').html(video_html);
-                  }
-                });
-              })
-              .fail(function(error) {
-                console.log(error);
-              })
-              .always(function() {});
-            }
-          }
+                    "</h2>" +
+                  "</article>" +
+                "</article>" +
+              "</div>";
+              if ((index % 3 == 2) || (index + 1 == count)) {
+                video_html += "</div>";
+              }
+              if (index + 1 == count) {
+                $('#videos').html(video_html);
+              }
+            });
+          })
+          .fail(function(error) {
+            console.log(error);
+          })
+          .always(function() {});
         }
       });
     })
