@@ -28,7 +28,7 @@
         if (item.hasOwnProperty('id')) {
           var channelID = item.id;
           $.ajax({
-            url: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=playlistitem&order=date&maxResults=48&channelId="+channelID+"&key=<?php echo get_theme_mod('youtube_api_key') ?>"
+            url: "https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&order=date&maxResults=48&channelId="+channelID+"&key=<?php echo get_theme_mod('youtube_api_key') ?>"
           })
           .done(function(response) {
             var count = response.items.length;
