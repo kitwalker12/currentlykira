@@ -1048,6 +1048,10 @@ label.mc_header_email {
   .footer-nav {
     display: none;
   }
+
+  .scroll-down {
+    display: none;
+  }
 }
 
 /* iPads (portrait and landscape) ----------- */
