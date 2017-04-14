@@ -26,6 +26,13 @@
             READ MORE
           </a>
         </article>
+        <!-- Scroll Down -->
+        <div class="scroll-down">
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+        </div>
+        <!-- END Scroll Down -->
       </div>
       <header>
         <?php edit_post_link(); ?>

@@ -42,7 +42,15 @@
   <div class="column">
     <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry' ); ?>>
       <?php if (has_post_thumbnail()): ?>
-        <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url('x-large'); ?>)"></div>
+        <div class="img-container" style="background-image: url(<?php the_post_thumbnail_url('x-large'); ?>)">
+          <!-- Scroll Down -->
+          <div class="scroll-down">
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+          </div>
+          <!-- END Scroll Down -->
+        </div>
       <?php endif ?>
       <article class="entry-info">
         <h3 class="entry-hashtag">

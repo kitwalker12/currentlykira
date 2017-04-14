@@ -796,6 +796,71 @@ label.mc_header_email {
   margin-bottom: 100px !important;
 }
 
+/* Scroll Down */
+
+.scroll-down {
+  position: absolute;
+  bottom: 20%;
+  right: 3%;
+}
+
+.scroll-down .chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.scroll-down .chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.scroll-down .chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.scroll-down .chevron:before,
+.scroll-down .chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: black;
+}
+
+.scroll-down .chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.scroll-down .chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   .container {
