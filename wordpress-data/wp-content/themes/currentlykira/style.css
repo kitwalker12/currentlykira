@@ -104,10 +104,9 @@ a, a:hover {
 }
 
 .entry-2 .img-container {
-  padding-bottom: 150%;
+  padding-bottom: 100%;
   margin: 0 auto 71px;
   min-width: 480px;
-  min-height: 720px;
 }
 
 .entry-3 .img-container {
@@ -153,7 +152,7 @@ a, a:hover {
   position: absolute;
   right: calc(50% - 142px);
   left: auto;
-  top: 25%;
+  top: 14%;
   padding: 80px 67px;
 }
 
